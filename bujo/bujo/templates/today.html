@@ -1,8 +1,8 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html'%}
   <head>
   </head>
-  <body style="background-color:powderblue;">
+  <body>
+    {% block content %}
     <title>Today</title>
     <h1><center>Today</center></h1>
     <text><center>3.30.2021</center></text>
@@ -15,10 +15,5 @@
     <br>
     <text><center> &hearts; Try to sleep by 12am</center></text>
     <br>
-    <a href="{% url 'home' %}"><center>Home</center></a>
-    <a href="{% url 'profile' %}"><center>Profile</center></a>
-    <a href="{% url 'key' %}"><center>Key</center></a>
-    <a href="{% url 'thisweek' %}"><center>This Week</center></a>
-    <a href="{% url 'today' %}"><center>Today</center></a>
+    {% endblock %}
   </body>
-</html>

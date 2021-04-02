@@ -1,8 +1,8 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html'%}
   <head>
   </head>
-  <body style="background-color:powderblue;">
+  <body>
+    {% block content %}
     <title>This Week</title>
     <h1><center>This Week</center></h1>
     <text><center>3.28.2021-4.03.2021</center></text>
@@ -17,10 +17,5 @@
     <br>
     <text><center> &empty; Do laundry</center></text>
     <br>
-    <a href="{% url 'home' %}"><center>Home</center></a>
-    <a href="{% url 'profile' %}"><center>Profile</center></a>
-    <a href="{% url 'key' %}"><center>Key</center></a>
-    <a href="{% url 'thisweek' %}"><center>This Week</center></a>
-    <a href="{% url 'today' %}"><center>Today</center></a>
+    {% endblock %}
   </body>
-</html>

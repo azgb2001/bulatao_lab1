@@ -1,8 +1,8 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html'%}
   <head>
   </head>
-  <body style="background-color:powderblue;">
+  <body>
+    {% block content %}
     <title>Key</title>
     <h1><center>Key</center></h1>
     <text><center> &diams; Tasks: Things you have to do</center></text>
@@ -14,10 +14,5 @@
     <text><center> &empty; Task incomplete</center></text>
     <br>
     <text><center> &Omicron; Task complete</center></text>
-    <a href="{% url 'home' %}"><center>Home</center></a>
-    <a href="{% url 'profile' %}"><center>Profile</center></a>
-    <a href="{% url 'key' %}"><center>Key</center></a>
-    <a href="{% url 'thisweek' %}"><center>This Week</center></a>
-    <a href="{% url 'today' %}"><center>Today</center></a>
+    {% endblock %}
   </body>
-</html>

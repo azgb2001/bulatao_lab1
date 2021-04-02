@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'profile' %}">Profile</a>
+    <a href="{% url 'key' %}">Key</a>
+    <a href="{% url 'thisweek' %}">This Week</a>
+    <a href="{% url 'today' %}">Today</a>
   </head>
   <body style="background-color:powderblue;">
-    <a href="{% url 'home' %}"><center>Home</center></a>
-    <a href="{% url 'profile' %}"><center>Profile</center></a>
-    <a href="{% url 'key' %}"><center>Key</center></a>
-    <a href="{% url 'thisweek' %}"><center>This Week</center></a>
-    <a href="{% url 'today' %}"><center>Today</center></a>
+    {% block content %}
+    {% endblock %}
   </body>
 </html>

@@ -1,14 +1,21 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html'%}
   <head>
   </head>
-  <body style="background-color:powderblue;">
+  <body>
+    {% block content %}
     <title>Your Bujo</title>
-    <h1><center>Today is going to be a great day!</center></h1>
-    <a href="{% url 'home' %}"><center>Home</center></a>
-    <a href="{% url 'profile' %}"><center>Profile</center></a>
-    <a href="{% url 'key' %}"><center>Key</center></a>
-    <a href="{% url 'thisweek' %}"><center>This Week</center></a>
-    <a href="{% url 'today' %}"><center>Today</center></a>
+    <center>
+        {% if Submit != none %}
+        <h1> Hello {{Submit}}! Today is going to be a great day!</h1>
+        {% else %}
+        <h1>Hello! What is your name?</h1>
+        <form action='home' method='post'>
+          {% csrf_token %}
+          {{ form }}
+          <input type='submit' value="Submit">
+        </form>
+        {% endif %}
+    </center>
+    {% endblock %}
   </body>
-</html>
+
